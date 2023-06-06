@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block main %}
+<h1 class="perform">Transactions Options Page</h1>
+<h2 class="perform">Please select from the list of {{ name }}</h2>
+<div class="outter-transact">
+    <a href="/transact/withdraw">
+    <div class="transact withdrawl">
+        <h1 class="choice">Withdraw</h1>
+    </div>
+    </a>
+    <a href="/transact/balance">
+    <div class="transact balance">
+        <h1 class="choice">Balance</h1>
+    </div>
+    </a>
+    <a href="/transact/transfer">
+    <div class="transact transfer">
+        <h1 class="choice">Transfer</h1>
+    </div>
+    </a>
+    <a href="transact/deposit">
+    <div class="transact deposit">
+        <h1 class="choice">Deposit</h1>
+    </div>
+    </a>
+</div>
+{% endblock %}

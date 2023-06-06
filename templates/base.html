@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/stylesheet.css')}}">
+</head>
+<body>
+<nav>
+    <ul>
+        <a href=""><li class="homes">Home</li></a>
+        <div class="other-items">
+            <a href="/transact"><li >Perform-Transaction</li></a>
+            <a href="/transact/add-beneficiary"><li >Add-Beneficiary</li></a>
+            <a href="/login"><li>Logout</li></a>
+        </div>
+
+    </ul>
+</nav>
+{% block main %}
+{% endblock %}
+</body>
+</html>

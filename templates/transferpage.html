@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h2 class="newdeposit">Welcome to the transfer page</h2>
+<h3 class="deposits-menu">Please supply the details of the person who is going to accept the transfer</h3>
+<div class="transfer-page">
+ <h1>Select the Beneficiary to make the transfer to</h1>
+    <table>
+        {% for data in userdata %}
+        <tr>
+            <td><a href="/transact/transfer/{{data[2]}}">{{data[0]}}</a></td>
+            <td><a href="/transact/transfer/{{data[2]}}">{{data[1]}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/transact/add-beneficiary"><button class="my-button"> Add Beneficiary + </button></a>
+</div>
+<script type="text/javascript" src="{{url_for('static', filename='app.js')}}"></script>
+{% endblock %}

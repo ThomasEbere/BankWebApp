@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="mytransfer">
+    <h3 class="transfer-text">Please Enter The Amount You Want To Transfer To {{receiverdata[0]}}</h3>
+    <div class="transferdiv">
+<form action="/transact/transfer/{{receiverdata[2]}}" method="POST">
+<label for="amount"> amount</label>
+<input type="text" name="amount">
+<input type="submit" value="submit">
+</form>
+</div>
+</div>
+{% endblock %}

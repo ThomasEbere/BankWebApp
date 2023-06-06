@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/stylesheet.css')}}">
+</head>
+<body>
+<header>
+    <h1>Welcome TO Waterloo Banking</h1>
+</header>
+{% if error %}
+<p><strong> {{ error }}</strong></p>
+
+{% elif emailerror %}
+<p><strong> {{ emailerror }}</strong></p>
+
+{% endif %}
+
+
+<div class="mydiv topdiv thelogin">
+    <h2>Please supply details to login</h2>
+    <form action="/login" method="POST">
+        <div class="innerdiv myadmin login ">
+
+            <div class="newdiv">
+                <label for="email">Email</label>
+                <input type="text"  name="email">
+            </div>
+            <div class="newdiv">
+                <label for="phonenumber">Password</label>
+                <input type="password"  name="password">
+            </div>
+            <div class="newdiv lastdiv">
+                <input type="submit"  name="" value="submit" class="loginsub">
+            </div>
+            <a href="/login" class="sign logged">sign up</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

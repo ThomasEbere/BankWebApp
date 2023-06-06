@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h3 class="success-transact">Successful Deposit </h3>
+<div class="transact-options deposit-option">
+  <a href="/homepage"><div class=" new-options another-transaction"><p></p>Go back to Home Screen</div></a>
+  <a href="#"><div class=" new-options home-screen"><p>Logout</p></div></a>
+  <a href ="/transact"><div class=" new-options logout"><p>Perform another transaction</p></div></a>
+</div>
+<script type="text/javascript" src="{{url_for('static', filename='app.js')}}"></script>
+{% endblock %}
